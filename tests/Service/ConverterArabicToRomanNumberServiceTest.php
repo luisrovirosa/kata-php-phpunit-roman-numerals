@@ -26,7 +26,7 @@ class ConverterArabicToRomanNumberServiceTest extends TestCase
 
         $romanNumber = $converter->convert($arabicDoneNumber);
 
-        $this->assertEquals($romanExpectedNumber, $romanNumber);
+        $this->assertEquals($romanExpectedNumber, $romanNumber, "Convert number $arabicDoneNumber");
     }
 
     /**
@@ -64,15 +64,15 @@ class ConverterArabicToRomanNumberServiceTest extends TestCase
     public function arabicToRomanUnitsNumbersProvider(): array
     {
         return [
-            'Convert number 1' => [1, 'I'],
-            'Convert number 2' => [2, 'II'],
-            'Convert number 3' => [3, 'III'],
-            'Convert number 4' => [4, 'IV'],
-            'Convert number 5' => [5, 'V'],
-            'Convert number 6' => [6, 'VI'],
-            'Convert number 7' => [7, 'VII'],
-            'Convert number 8' => [8, 'VIII'],
-            'Convert number 9' => [9, 'IX'],
+            [1, 'I'],
+            [2, 'II'],
+            [3, 'III'],
+            [4, 'IV'],
+            [5, 'V'],
+            [6, 'VI'],
+            [7, 'VII'],
+            [8, 'VIII'],
+            [9, 'IX'],
         ];
     }
 
@@ -82,34 +82,34 @@ class ConverterArabicToRomanNumberServiceTest extends TestCase
     public function arabicToRomanTensNumbersProvider(): array
     {
         return [
-            'Convert number 10' => [10, 'X'],
-            'Convert number 11' => [11, 'XI'],
-            'Convert number 12' => [12, 'XII'],
-            'Convert number 13' => [13, 'XIII'],
-            'Convert number 14' => [14, 'XIV'],
-            'Convert number 15' => [15, 'XV'],
-            'Convert number 16' => [16, 'XVI'],
-            'Convert number 19' => [19, 'XIX'],
-            'Convert number 23' => [23, 'XXIII'],
-            'Convert number 27' => [27, 'XXVII'],
-            'Convert number 30' => [30, 'XXX'],
-            'Convert number 33' => [33, 'XXXIII'],
-            'Convert number 38' => [38, 'XXXVIII'],
-            'Convert number 40' => [40, 'XL'],
-            'Convert number 44' => [44, 'XLIV'],
-            'Convert number 48' => [48, 'XLVIII'],
-            'Convert number 49' => [49, 'XLIX'],
-            'Convert number 50' => [50, 'L'],
-            'Convert number 53' => [53, 'LIII'],
-            'Convert number 60' => [60, 'LX'],
-            'Convert number 68' => [68, 'LXVIII'],
-            'Convert number 70' => [70, 'LXX'],
-            'Convert number 73' => [73, 'LXXIII'],
-            'Convert number 79' => [79, 'LXXIX'],
-            'Convert number 80' => [80, 'LXXX'],
-            'Convert number 84' => [84, 'LXXXIV'],
-            'Convert number 88' => [88, 'LXXXVIII'],
-            'Convert number 99' => [99, 'XCIX'],
+            [10, 'X'],
+            [11, 'XI'],
+            [12, 'XII'],
+            [13, 'XIII'],
+            [14, 'XIV'],
+            [15, 'XV'],
+            [16, 'XVI'],
+            [19, 'XIX'],
+            [23, 'XXIII'],
+            [27, 'XXVII'],
+            [30, 'XXX'],
+            [33, 'XXXIII'],
+            [38, 'XXXVIII'],
+            [40, 'XL'],
+            [44, 'XLIV'],
+            [48, 'XLVIII'],
+            [49, 'XLIX'],
+            [50, 'L'],
+            [53, 'LIII'],
+            [60, 'LX'],
+            [68, 'LXVIII'],
+            [70, 'LXX'],
+            [73, 'LXXIII'],
+            [79, 'LXXIX'],
+            [80, 'LXXX'],
+            [84, 'LXXXIV'],
+            [88, 'LXXXVIII'],
+            [99, 'XCIX'],
         ];
     }
 
@@ -119,13 +119,13 @@ class ConverterArabicToRomanNumberServiceTest extends TestCase
     public function arabicToRomanHundredsNumbersProvider(): array
     {
         return [
-            'Convert number 100' => [100, 'C'],
-            'Convert number 104' => [104, 'CIV'],
-            'Convert number 249' => [249, 'CCXLIX'],
-            'Convert number 399' => [399, 'CCCXCIX'],
-            'Convert number 400' => [400, 'CD'],
-            'Convert number 900' => [900, 'CM'],
-            'Convert number 999' => [999, 'CMXCIX'],
+            [100, 'C'],
+            [104, 'CIV'],
+            [249, 'CCXLIX'],
+            [399, 'CCCXCIX'],
+            [400, 'CD'],
+            [900, 'CM'],
+            [999, 'CMXCIX'],
         ];
     }
 
@@ -135,10 +135,10 @@ class ConverterArabicToRomanNumberServiceTest extends TestCase
     public function arabicToRomanThousandsNumbersProvider(): array
     {
         return [
-            'Convert number 1759' => [1759, 'MDCCLIX'],
-            'Convert number 1999' => [1999, 'MCMXCIX'],
-            'Convert number 2020' => [2020, 'MMXX'],
-            'Convert number 3888' => [3888, 'MMMDCCCLXXXVIII'],
+            [1759, 'MDCCLIX'],
+            [1999, 'MCMXCIX'],
+            [2020, 'MMXX'],
+            [3888, 'MMMDCCCLXXXVIII'],
         ];
     }
 }
