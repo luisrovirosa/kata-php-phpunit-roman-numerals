@@ -34,9 +34,9 @@ class ConverterArabicToRomanNumberServiceTest extends TestCase
      */
     public function testItDoesNotAllowConversionOfNumbersLessThanOne()
     {
-        $this->expectException(MinimumArabicNumberValueException::class);
-
         $converter = new ConverterRomanToArabicNumberService();
+
+        $this->expectException(MinimumArabicNumberValueException::class);
 
         $converter->convert(0);
     }
@@ -46,9 +46,9 @@ class ConverterArabicToRomanNumberServiceTest extends TestCase
      */
     public function testItDoesNotAllowConversionOfNumbersEqualOrGreaterThanFourThousand()
     {
-        $this->expectException(MaximunArabicNumberValueException::class);
-
         $converter = new ConverterRomanToArabicNumberService();
+
+        $this->expectException(MaximunArabicNumberValueException::class);
 
         $converter->convert(4000);
     }
