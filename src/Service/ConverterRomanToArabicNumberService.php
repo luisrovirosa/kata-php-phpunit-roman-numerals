@@ -33,9 +33,9 @@ class ConverterRomanToArabicNumberService
     /**
      * @param int $arabicNumber
      *
-     * @return string|null
+     * @return string
      */
-    public function convert(int $arabicNumber): ?string
+    public function convert(int $arabicNumber): string
     {
         $this->validateReceivedArabicNumber($arabicNumber);
 
