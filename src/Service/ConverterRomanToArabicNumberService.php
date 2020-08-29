@@ -110,13 +110,7 @@ class ConverterRomanToArabicNumberService
      */
     private function getDecreasingOrderedArabicToRomanNumbersEquivalence(): array
     {
-        $arabicToRomanNumbersEquivalences = self::ARABIC_TO_ROMAN_NUMBERS_EQUIVALENCE;
-
-        uksort($arabicToRomanNumbersEquivalences, function ($a, $b) {
-            return $b <=> $a;
-        });
-
-        return $arabicToRomanNumbersEquivalences;
+        return array_reverse(self::ARABIC_TO_ROMAN_NUMBERS_EQUIVALENCE, true);
     }
 
     /**
